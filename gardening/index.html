@@ -55,19 +55,22 @@
         aria-required="true"
         maxlength="5"
         inputmode="numeric">
-        <input type="button" class="btn btn-primary w-100 my-3" value="GO">  
+
+        <div class="flex-break"></div>
+
+        <input type="button" class="btn btn-primary w-100 my-0" value="GO">  
       </form>
 
       <p id="form_error" class="d-none"></p>
 
       <section id="response" class="d-none">
         <div id="map"></div>
+        <p class="text-center d-none"><a href="#" target="_blank">See more about this zone.</a></p>
+        <p class="text-center my-5">
+          <a id="learn_more" href="#" target="_blank"></a><br>
+          <a class="btn btn-primary mt-5" href="javascript:location.reload();">Again?</a>
+        </p>
       </section>
-
-      <p class="text-center d-none"><a href="#" target="_blank">See more about this zone.</a></p>
-      <p class="text-center">
-        <a class="btn btn-primary mt-3 mx-auto" href="javascript:location.reload();">Again?</a>
-      </p>
 
     </section>
     

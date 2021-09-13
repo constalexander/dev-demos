@@ -3,6 +3,7 @@ const ele_submit = document.querySelectorAll("#form_1 input[type=button]")[0];
 const ele_response = document.querySelectorAll("#response")[0];
 const ele_form_error = document.querySelectorAll("#form_error")[0];
 const zipRegex = /^\d{5}$/;
+const extLinkRegex = /\D/g;
 
 ele_submit.onclick = function () {
   let zip = ele_zip.value;
@@ -12,7 +13,9 @@ ele_submit.onclick = function () {
     document.querySelector("#map").remove();
     let ele_map = document.createElement("div");
     ele_map.setAttribute("id", "map");
-    document.querySelector("#response").append(ele_map);
+    document
+      .querySelector("#response")
+      .insertAdjacentElement("afterbegin", ele_map);
 
     axios
       .get(`https://phzmapi.org/${zip}.json`)
@@ -23,6 +26,13 @@ ele_submit.onclick = function () {
         document.querySelector("#response").classList.remove("d-none");
         document.querySelector("#app").classList.add("p-0");
         document.querySelector("#form_1").classList.add("d-none");
+
+        let zoneNum = response.data.zone.replace(extLinkRegex, "");
+        let extUrl = `https://garden.lovetoknow.com/wiki/Gardening_Zone_${zoneNum}`;
+        document.querySelector("#learn_more").setAttribute("href", extUrl);
+        document.querySelector(
+          "#learn_more"
+        ).innerHTML = `Temps and tips for zone ${zoneNum}`;
 
         /* Make the map */
         let lat = response.data.coordinates.lat;
