@@ -2,7 +2,7 @@
 
 Look up your USDA Hardiness Zone by Zip Code.
 
-<a href="https://growing-zone.surge.sh/">Demo</a>
+<a href="https://growing-zone.surge.sh/" target="_blank">Demo</a>
 
 ## Tech Stack
 
@@ -10,4 +10,4 @@ Look up your USDA Hardiness Zone by Zip Code.
 - Bootstrap 5
 - Axios
 - Leaflet.js
-- <a href="https://surge.sh">Surge.sh</a>
+- <a href="https://surge.sh" target="_blank">Surge.sh</a>
