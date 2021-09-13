@@ -31,7 +31,8 @@
   border-radius: 5px;
 }
 .btn-primary:hover,
-.btn-primary:active {
+.btn-primary:active,
+.btn-primary:focus {
   background-color: var(--tertiary-color);
   border-color: var(--secondary-color);
   color: var(--secondary-color);
@@ -205,7 +206,7 @@ nav ul li a:hover {
   text-align: center;
   color: var(--medium-gray);
 }
-#form_1 input[type="button"] {
+#form_1 input[type="submit"] {
   flex: 0 0 200px;
   margin: 0 auto;
   height: 40px;
@@ -215,16 +216,17 @@ nav ul li a:hover {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
-#form_1 #form_error {
-  flex: 0 1 200px;
-  color: orangered;
-  background-color: var(--white);
+#form_error {
+  flex: 0 0 196px;
+  color: var(--black);
+  background-color: orangered;
   padding: 2px 0;
   text-align: center;
-  position: relative;
-  top: 62px;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   font-weight: 600;
+  position: relative;
+  top: -2px;
+  border-radius: 0 0 5px 5px;
 }
 #map {
   height: 400px;

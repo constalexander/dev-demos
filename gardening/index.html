@@ -46,7 +46,7 @@
 
     <section id="app" class="mt-3">
 
-      <form id="form_1" action="" method="get">
+      <form id="form_1" onsubmit="return goHandler(event);">
         <input
         type="text"
         id="zip"
@@ -58,10 +58,15 @@
 
         <div class="flex-break"></div>
 
-        <input type="button" class="btn btn-primary w-100 my-0" value="GO">  
+        <input type="submit" class="btn btn-primary w-100 my-0" value="GO">  
+
+        <div class="flex-break"></div>
+
+        <p id="form_error" class="d-none mx-auto"></p>
+
       </form>
 
-      <p id="form_error" class="d-none"></p>
+      
 
       <section id="response" class="d-none">
         <div id="map"></div>

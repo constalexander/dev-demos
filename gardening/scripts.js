@@ -1,11 +1,13 @@
 const ele_zip = document.querySelectorAll("#form_1 input[id=zip]")[0];
-const ele_submit = document.querySelectorAll("#form_1 input[type=button]")[0];
+const ele_submit = document.querySelectorAll("#form_1 input[type=submit]")[0];
 const ele_response = document.querySelectorAll("#response")[0];
 const ele_form_error = document.querySelectorAll("#form_error")[0];
 const zipRegex = /^\d{5}$/;
 const extLinkRegex = /\D/g;
 
-ele_submit.onclick = function () {
+function goHandler(e) {
+  e.preventDefault();
+
   let zip = ele_zip.value;
 
   if (zipRegex.test(zip)) {
@@ -62,17 +64,25 @@ ele_submit.onclick = function () {
             "<h4>Zone <strong>" + response.data.zone + "</strong></h4>"
           )
           .openOn(map);
+
+        return false;
       })
       .catch(function (error) {
         console.log(error);
         document.querySelectorAll("#form_error")[0].classList.remove("d-none");
         document.querySelectorAll("#form_error")[0].innerText =
-          "Could not find zone for that zip code.";
+          "Please try a different zip code.";
+
+        return false;
       })
-      .then(function () {});
+      .then(function () {
+        return false;
+      });
   } else {
     document.querySelectorAll("#form_error")[0].classList.remove("d-none");
     document.querySelectorAll("#form_error")[0].innerText =
-      "Please enter a valid, 5-digit zip code.";
+      "Please enter a valid, 5-digit zip.";
+
+    return false;
   }
-};
+}
