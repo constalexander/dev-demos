@@ -9,6 +9,10 @@
   --white:#F4F4F9;
   --primary-font:'Source Sans Pro', sans-serif;
 }
+/* Bootstrap Overrides */
+
+
+/* Begin styles */
 html {
   font-size:16px;
 }
@@ -24,14 +28,44 @@ body {
   radial-gradient(circle at 50% 99%, 
   rgba(107,193,41,.75), rgba(107,193,41,0) 70%);
 }
+h1, h2, h3, h4, h5, p {
+  margin:0;
+}
+a {
+  text-decoration:none;
+  color:var(--primary-color);
+  font-weight:400;
+  border-bottom:1px solid var(--primary-color);
+}
+ul {
+  margin-bottom:0;
+}
 main {
   background-color:var(--white);
   max-width:90vw;
   min-height:100vh;
   box-shadow:0 0 2px var(--medium-gray);
 }
-h1, h2, h3, h4, h5, p {
-  margin:0;
+nav {
+  background-color:var(--black);
+  color:var(--white);
+}
+nav ul {
+  list-style-type:none;
+}
+nav ul li {
+  display:inline-block;
+  margin-left:1rem;
+}
+nav ul li a {
+  color:var(--white);
+  border-color:var(--white);
+}
+nav ul li a:hover {
+  color:var(--light-gray);
+  border-color:var(--light-gray);
+  position:relative;
+  top:-2px;
 }
 
 /*
