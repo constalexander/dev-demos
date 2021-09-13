@@ -192,6 +192,7 @@ nav ul li a:hover {
   flex: 0 0 200px;
   margin: 0 auto;
   height: 40px;
+  max-width: 200px;
   background-color: var(--white);
   color: var(--black);
   border: 2px solid var(--secondary-color);
