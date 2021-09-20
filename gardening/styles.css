@@ -114,6 +114,7 @@ body {
     );
   background-color: rgb(var(--primary-color-rgb));
   background-size: 100% 100%;
+  background-attachment: fixed;
 }
 h1,
 h2,
