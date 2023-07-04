@@ -13,4 +13,4 @@
 
 ## See it live
 
-- [growing-zone-finder.surge.sh](https://growing-zone-finder.surge.sh)
+- [growzone.surge.sh](https://growzone.surge.sh)
